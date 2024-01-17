@@ -9,7 +9,15 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
         <link rel="stylesheet" href="style.css">
-
+        <style>
+            select {
+                appearance: none;
+                width: auto;
+                display: none;
+                background-color: aqua;
+                color:black;
+            }
+        </style>
     </head>
     <body>
 
@@ -24,10 +32,24 @@
     
                         <div class="p-3 text-center" id="settings">
                             <h6 class="click-section d-inline-block">About Me</h6>
-                            <h6 class="click-section d-inline-block ml-3">Projects</h6>
+                            <h6 class="click-section d-inline-block ml-3" onclick="showProjectDropDown()">Projects</h6>
+                            <select id="projectDropdown">
+                                <option>Games</option>
+                                <option>Mobile Apps</option>
+                                <option>Data-Science</option>
+                            </select>
                             <h6 class="click-section d-inline-block ml-3">Contact</h6>
                         </div>
                     </div>
+
+                    <script>
+                        function showProjectDropDown() {
+                            var dropdown = document.getElementById('projectDropdown');
+                            dropdown.style.display = (dropdown.style.display == 'none' ||
+                                                      dropdown.style.display == '') ?
+                                                    'block' : 'none';
+                        }
+                    </script>
     
                     <!-- Content div-->
                     <div class="col-md-6 fade-text animate__animated animate__fadeInUp" id="header_div">
