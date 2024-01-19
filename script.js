@@ -1,57 +1,59 @@
-toggleGameElements("none");
-toggleMobileElements("none");
 
 const projectDropdown = document.getElementById("projectDropdown");
 const animateClasses = "col-md-6 side_area d-flex flex-column align-items-center" +
                         "justify-content-center pr-3 fade-text animate__animated animate__fadeInDown";
 
 const option = {
-    game: "game-option",
-    mobile: "mobile-option"
+    game: {
+        id: "game-option",
+        paragraph: document.getElementById("gameParagraph"),
+        div: document.getElementById("gameApps")
+    },
+    mobile: {
+        id: "mobile-option",
+        paragraph: document.getElementById("mobileParagraph"),
+        div: document.getElementById("mobileApps")
+    }
 };
 
 function slideUpAnimation(elementId) {
-
+    
 }
 
-
-
-function toggleMobileElements(toggle) {
-    var mobileDiv = document.getElementById("mobileApps");
-    var mobileParagraph = document.getElementById("mobileParagraph");
-
-
-    mobileDiv.style.display = String(toggle);
-    mobileParagraph.style.display = String(toggle);
+function toggleElements(element, toggle) {
+    element.div.style.display = String(toggle);
+    element.paragraph.style.display = String(toggle);
 }
 
-function toggleGameElements(toggle) {
-    var gameDiv = document.getElementById("gameApps");
-    var gameParagraph = document.getElementById("gameParagraph");
-
-    gameDiv.style.display = String(toggle);
-    gameParagraph.style.display = String(toggle);
-}
 
 function showGameApps() {
-    toggleMobileElements("none");
-    toggleGameElements("block");
+    toggleElements(option.mobile, "none");
+    toggleElements(option.game, "block");
     slideUpAnimation(option.game);
 }
 
 function showMobileApps() {
-    toggleMobileElements("block");
-    toggleGameElements("none");
+    toggleElements(option.mobile, "block");
+    toggleElements(option.game, "none");
     slideUpAnimation(option.mobile);
 }
+
+
+function toggleAllElements(option, toggle) {
+    option.forEach(element => {
+        toggleElements(element, toggle);
+    });
+}
+
+toggleAllElements(Object.values(option), "none");
 
 projectDropdown.addEventListener("change", function() {
     const selectedOption = projectDropdown.options[projectDropdown.selectedIndex];
 
-    if (selectedOption.id === String(option.game)) {
+    if (selectedOption.id === String(option.game.id)) {
         console.log("game");
         showGameApps();
-    } else if (selectedOption.id == String(option.mobile)) {
+    } else if (selectedOption.id == String(option.mobile.id)) {
         console.log("mobile");
         showMobileApps();
     } else {
