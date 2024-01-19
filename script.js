@@ -20,6 +20,14 @@ function slideUpAnimation(elementId) {
     
 }
 
+
+
+
+function toggleHeaderDiv(toggle) {
+    document.getElementById("header_block").style.display = String(toggle);
+    document.getElementById("header_div").style.display = String(toggle);
+}
+
 function toggleElements(element, toggle) {
     element.div.style.display = String(toggle);
     element.paragraph.style.display = String(toggle);
@@ -29,12 +37,14 @@ function toggleElements(element, toggle) {
 function showGameApps() {
     toggleElements(option.mobile, "none");
     toggleElements(option.game, "block");
+    toggleHeaderDiv("none");
     slideUpAnimation(option.game);
 }
 
 function showMobileApps() {
     toggleElements(option.mobile, "block");
     toggleElements(option.game, "none");
+    toggleHeaderDiv("none");
     slideUpAnimation(option.mobile);
 }
 
@@ -45,7 +55,13 @@ function toggleAllElements(option, toggle) {
     });
 }
 
+toggleHeaderDiv("block");
 toggleAllElements(Object.values(option), "none");
+
+document.getElementById("about-me").addEventListener("click", function() {
+    toggleHeaderDiv("block");
+    toggleAllElements(Object.values(option), "none");
+});
 
 projectDropdown.addEventListener("change", function() {
     const selectedOption = projectDropdown.options[projectDropdown.selectedIndex];
