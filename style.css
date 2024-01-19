@@ -1,6 +1,11 @@
 /* style.css */
 @charset "UTF-8";
 
+:root {
+    --primary-color: rgb(77, 175, 255);
+    --secondary-color: rgb(0, 0, 0);
+}
+
 body {
     min-height: 100vh;
     display: flex;
@@ -9,6 +14,15 @@ body {
     font-size: 16px;
 }
 
+#intro-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    color: var(--secondary-color);
+}
 
 #header_div p {
     font-weight:450;
@@ -20,12 +34,18 @@ body {
     font-size: 1.5rem;
 }
 
+#header_div h1, h2 {
+    padding-left: 2%;
+}
+
 #header_div {
     padding-top: 10%;
     padding-left: 5%;
 }
 
-
+h1, h2, h5 {
+    color: var(--primary-color);
+}
 
 h2 {
     font-size:medium;
@@ -37,7 +57,7 @@ h2 {
 }
 
 .side_area {
-    background-color: rgb(11, 255, 255);
+    background-color: var(--primary-color);
     max-width: fit-content;
     max-height: fit-content;
     margin-top: 10%;
@@ -55,6 +75,10 @@ h2 {
 
 .click-section:hover {
     transform: translate(0, -5px);
+}
+
+.click-section:focus {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 #project_div {
@@ -81,3 +105,35 @@ h3 {
     background-color: rgb(225, 251, 255);
     transform: translate(0, -5px);
 }
+
+select {
+
+    width: fit-content;
+    background-color: var(--primary-color);
+    color:black;
+    font-weight: 500;
+    text-align: center;
+    border: 0cm;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-animation: none;
+    outline: none;
+    transition-duration: 0.3s;
+    translate: 8px;
+}
+
+select:hover {
+    transform: translateY(-5px);
+}
+
+select:focus {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+select option {
+    background-color: rgba(255, 255, 255, 0.3);
+    outline-width: 0;
+    border-radius: 0;
+}
+

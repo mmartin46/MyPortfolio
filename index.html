@@ -9,15 +9,6 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
         <link rel="stylesheet" href="style.css">
-        <style>
-            select {
-                appearance: none;
-                width: auto;
-                display: none;
-                background-color: aqua;
-                color:black;
-            }
-        </style>
     </head>
     <body>
 
@@ -27,29 +18,22 @@
                 <div class="row">
                     <!--New div on the left-->
                     <div class="col-md-6 side_area d-flex flex-column align-items-center
-                                justify-content-center pr-3 fade-text animate__animated animate__fadeInDown">
+                                justify-content-center pr-3 fade-text animate__animated animate__fadeInDown" id="intro-block">
                         <img id="my_img" src="assets/1330857.jpg">
     
                         <div class="p-3 text-center" id="settings">
                             <h6 class="click-section d-inline-block">About Me</h6>
-                            <h6 class="click-section d-inline-block ml-3" onclick="showProjectDropDown()">Projects</h6>
-                            <select id="projectDropdown">
+                            <select id="projectDropdown" onmouseover="showProjectDropDown()">
+                                <option selected disabled hidden id="projects-id">Projects</option>
                                 <option>Games</option>
                                 <option>Mobile Apps</option>
-                                <option>Data-Science</option>
                             </select>
                             <h6 class="click-section d-inline-block ml-3">Contact</h6>
                         </div>
                     </div>
 
-                    <script>
-                        function showProjectDropDown() {
-                            var dropdown = document.getElementById('projectDropdown');
-                            dropdown.style.display = (dropdown.style.display == 'none' ||
-                                                      dropdown.style.display == '') ?
-                                                    'block' : 'none';
-                        }
-                    </script>
+
+                    
     
                     <!-- Content div-->
                     <div class="col-md-6 fade-text animate__animated animate__fadeInUp" id="header_div">
@@ -69,6 +53,42 @@
     
             <!-- Project div-->
             <div class="row fade-text animate__animated animate__fadeInUp" id="project_div">
+                <style>
+
+                    .description h1 {
+                        color:rgb(77, 175, 255);
+
+                    }
+
+                    .description h1, p {
+                        padding-left: 3%;
+                        text-align: left;
+                    }
+
+                    .description h1 {
+                        padding-bottom: 1%;
+                    }
+
+                    .description {
+                        padding-bottom: 5%;
+                    }
+                </style>
+
+                <div class="description">
+
+                    <h1>Games</h1>
+                    <p>Since I was an undergradate student, my toolkit of programming languages to develop games
+                       were in C++, C, Java, and Python. Even today, I utilize developing games as a way to practice
+                       my software development skills in a creative manner. 
+                    </p>
+
+                    <h1>Mobile Apps</h1>
+                    <p>I have developed mobile applications utilizing programming languages such as Java and Python
+                        and have utilized development platforms such as Realtime Database and utilized a Database in AWS.
+                        I am willing to learn and currently developing my skillset in mobile development.
+                    </p>
+
+                </div>
                 <div class="container">
                     <div class="row">
                         <div class="col-sm">
@@ -98,7 +118,7 @@
                                 <img src="assets\projects\games\balloonjump\screen_3.png" class="card-img-top mt-3 mx-auto">
                                 <div class="card-body">
                                     <h5 class="card-title">Balloon Jump</h5>
-                                    <p class="card-text">Platformer Based-Game Developed in C++</p>
+                                    <p class="card-text">SFML Platformer Based-Game Developed in C++</p>
                                     <a href="https://github.com/mmartin46/TacoShooter" class="btn btn-primary">Click To View</a>
                                 </div>
                             </div>
