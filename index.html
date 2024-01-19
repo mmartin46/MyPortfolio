@@ -9,6 +9,9 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
         <link rel="stylesheet" href="style.css">
+        <style>
+
+        </style>
     </head>
     <body>
 
@@ -23,10 +26,10 @@
     
                         <div class="p-3 text-center" id="settings">
                             <h6 class="click-section d-inline-block">About Me</h6>
-                            <select id="projectDropdown" onmouseover="showProjectDropDown()">
+                            <select id="projectDropdown">
                                 <option selected disabled hidden id="projects-id">Projects</option>
-                                <option>Games</option>
-                                <option>Mobile Apps</option>
+                                <option id="game-option">Games</option>
+                                <option id="mobile-option">Mobile Apps</option>
                             </select>
                             <h6 class="click-section d-inline-block ml-3">Contact</h6>
                         </div>
@@ -75,92 +78,99 @@
                 </style>
 
                 <div class="description">
+                    <span id="gameParagraph">
+                        <h1>Games</h1>
+                        <p>Since I was an undergradate student, my toolkit of programming languages to develop games
+                        were in C++, C, Java, and Python. Even today, I utilize developing games as a way to practice
+                        my software development skills in a creative manner. 
+                        </p>
+                    </span>
 
-                    <h1>Games</h1>
-                    <p>Since I was an undergradate student, my toolkit of programming languages to develop games
-                       were in C++, C, Java, and Python. Even today, I utilize developing games as a way to practice
-                       my software development skills in a creative manner. 
-                    </p>
+                    <span id="mobileParagraph">
+                        <h1>Mobile Apps</h1>
+                        <p>I have developed mobile applications utilizing programming languages such as Java and Python
+                            and have utilized development platforms such as Realtime Database and utilized a Database in AWS.
+                            I am willing to learn and currently developing my skillset in mobile development.
+                        </p>
+                    </span>
 
-                    <h1>Mobile Apps</h1>
-                    <p>I have developed mobile applications utilizing programming languages such as Java and Python
-                        and have utilized development platforms such as Realtime Database and utilized a Database in AWS.
-                        I am willing to learn and currently developing my skillset in mobile development.
-                    </p>
 
                 </div>
                 <div class="container">
-                    <div class="row">
-                        <div class="col-sm">
-                            <div class="card" style="width: auto;">
-                                <img src="assets\projects\games\tacoplatformer\plat_0.png" class="card-img-top mt-3 mx-auto">
-                                <div class="card-body">
-                                    <h5 class="card-title">Taco Platformer</h5>
-                                    <p class="card-text">SDL2 Platformer Game Developed in C++</p>
-                                    <a href="https://github.com/mmartin46/Taco_Platformer" class="btn btn-primary">Click To View</a>
+                    <span id="gameApps">
+                        <div class="row">
+                            <div class="col-sm">
+                                <div class="card" style="width: auto;">
+                                    <img src="assets\projects\games\tacoplatformer\plat_0.png" class="card-img-top mt-3 mx-auto">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Taco Platformer</h5>
+                                        <p class="card-text">SDL2 Platformer Game Developed in C++</p>
+                                        <a href="https://github.com/mmartin46/Taco_Platformer" class="btn btn-primary">Click To View</a>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <div class="col-sm">
+                                <div class="card" style="width: auto;">
+                                    <img src="assets\projects\games\tacoshooter\screen_2.png" class="card-img-top mt-3 mx-auto">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Taco Shooter</h5>
+                                        <p class="card-text">RPG Style-Project Developed in Java</p>
+                                        <a href="https://github.com/mmartin46/TacoShooter" class="btn btn-primary">Click To View</a>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <div class="col-sm">
+                                <div class="card" style="width: auto;">
+                                    <img src="assets\projects\games\balloonjump\screen_3.png" class="card-img-top mt-3 mx-auto">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Balloon Jump</h5>
+                                        <p class="card-text">SFML Platformer Based-Game Developed in C++</p>
+                                        <a href="https://github.com/mmartin46/TacoShooter" class="btn btn-primary">Click To View</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-        
-                        <div class="col-sm">
-                            <div class="card" style="width: auto;">
-                                <img src="assets\projects\games\tacoshooter\screen_2.png" class="card-img-top mt-3 mx-auto">
-                                <div class="card-body">
-                                    <h5 class="card-title">Taco Shooter</h5>
-                                    <p class="card-text">RPG Style-Project Developed in Java</p>
-                                    <a href="https://github.com/mmartin46/TacoShooter" class="btn btn-primary">Click To View</a>
-                                </div>
-                            </div>
-                        </div>
-        
-                        <div class="col-sm">
-                            <div class="card" style="width: auto;">
-                                <img src="assets\projects\games\balloonjump\screen_3.png" class="card-img-top mt-3 mx-auto">
-                                <div class="card-body">
-                                    <h5 class="card-title">Balloon Jump</h5>
-                                    <p class="card-text">SFML Platformer Based-Game Developed in C++</p>
-                                    <a href="https://github.com/mmartin46/TacoShooter" class="btn btn-primary">Click To View</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </span>
     
-    <!-- 
-                    <h3>Mobile Applications</h3>
-                    <div class="row">
-                        <div class="col-sm">
-                            <div class="card" style="width: auto;">
-                                <img src="assets\projects\mobile\shannon\menu_screen.png" class="card-img-top mt-3 mx-auto">
-                                <div class="card-body">
-                                    <h5 class="card-title">Shannon HealthCare App</h5>
-                                    <p class="card-text">Android Application for Shannon HealthCare</p>
-                                    <a href="https://github.com/rileyArndt/ShannonHealthApp" class="btn btn-primary">Click To View</a>
+                    <span id="mobileApps">
+                        <div class="row">
+                            <div class="col-sm">
+                                <div class="card" style="width: auto;">
+                                    <img src="assets\projects\mobile\shannon\menu_screen.png" class="card-img-top mt-3 mx-auto">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Shannon HealthCare App</h5>
+                                        <p class="card-text">Android Application for Shannon HealthCare</p>
+                                        <a href="https://github.com/rileyArndt/ShannonHealthApp" class="btn btn-primary">Click To View</a>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <div class="col-sm">
+                                <div class="card" style="width: auto;">
+                                    <img src="assets\projects\mobile\chatapp\chatapp.png" class="card-img-top mt-3 mx-auto">
+                                    <div class="card-body">
+                                        <h5 class="card-title">ChatterApp</h5>
+                                        <p class="card-text">A Basic Messaging Applet</p>
+                                        <a href="https://github.com/mmartin46/ChatteredApp?tab=readme-ov-file" class="btn btn-primary">Click To View</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm">
+                                <div class="card" style="width: auto;">
+                                    <img src="assets\projects\mobile\bmi\bmi_0.png" class="card-img-top mt-3 mx-auto">
+                                    <div class="card-body">
+                                        <h5 class="card-title">BMI Calculator</h5>
+                                        <p class="card-text">A Basic BMI Calculator Applet</p>
+                                        <a href="https://github.com/mmartin46/BMICalculator" class="btn btn-primary">Click To View</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-        
-                        <div class="col-sm">
-                            <div class="card" style="width: auto;">
-                                <img src="assets\projects\mobile\bmi\bmi_0.png" class="card-img-top mt-3 mx-auto">
-                                <div class="card-body">
-                                    <h5 class="card-title">BMI Calculator</h5>
-                                    <p class="card-text">A Basic BMI Calculator Applet</p>
-                                    <a href="https://github.com/mmartin46/BMICalculator" class="btn btn-primary">Click To View</a>
-                                </div>
-                            </div>
-                        </div>
-        
-                        <div class="col-sm">
-                            <div class="card" style="width: auto;">
-                                <img src="assets\projects\mobile\chatapp\chatapp.png" class="card-img-top mt-3 mx-auto">
-                                <div class="card-body">
-                                    <h5 class="card-title">ChatterApp</h5>
-                                    <p class="card-text">A Basic Messaging Applet</p>
-                                    <a href="https://github.com/mmartin46/ChatteredApp?tab=readme-ov-file" class="btn btn-primary">Click To View</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>                         -->
+                    </span>
+                    
                 </div>
             </div>
         </div>
