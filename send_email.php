@@ -15,7 +15,16 @@
         </style>
     </head>
     <body>
-        <h1 class="fade-text animate__animated animate__fadeInUp" id="mainMessage">Thank you, your message has been sent</h1>
+        <div class="p-3 text-center" id="settings">
+            <h6 class="click-section d-inline-block" id="about-me">About Me</h6>
+            <select id="projectDropdown">
+                <option selected disabled hidden id="projects-id">Projects</option>
+                <option id="game-option">Games</option>
+                <option id="mobile-option">Mobile Apps</option>
+            </select>
+            <h6 class="click-section d-inline-block ml-3">Contact</h6>
+        </div>
+        <h2 class="fade-text animate__animated animate__fadeInUp" id="mainMessage">Thank you, your message has been sent</h1>
         <?php
 
             require __DIR__ . '/vendor/autoload.php';
