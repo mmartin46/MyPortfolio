@@ -34,7 +34,33 @@
                     </div>
 
 
-                    
+                    <!--Contact div-->
+                    <div class="col-md-6 fade-text animate__animated animate__fadeInUp" id="contact_div">
+                        <form action="send_email.php" method="POST">
+                            <div class="form-group">
+                                <h1>Contact Me</h1>
+                                <p>If you have any other questions or requests, feel free to contact me.</p>
+
+
+                                <label for="input-email">Email</label>
+                                <input class="form-control" id="user-email-text" type="email" name="email" placeholder="Enter email"> 
+                                
+                                <br>
+                                <label for="input-subject">Subject</label>
+                                <input class="form-control" id="user-subject-text" type="text" name="subject" placeholder="Enter subject"> 
+                                
+                                <br>
+                                <label for="input-message">Message</label>
+
+                                <br>
+                                <textarea class="form-control" id="user-message-text" rows="3"
+                                placeholder="Enter Message" type="text" name="message"></textarea>
+                            
+                                <br>
+                                <input class="btn btn-primary" type="submit" name="submit" value="Send message">
+                            </div>
+                        </form>
+                    </div>
     
                     <!-- Content div-->
                     <div class="col-md-6 fade-text animate__animated animate__fadeInUp" id="header_div">
@@ -190,5 +216,7 @@
                 });
             })
         </script>
+
+
     </body>
 </html>

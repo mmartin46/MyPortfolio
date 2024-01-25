@@ -20,12 +20,16 @@
     align-items: center;
 }
 
-p {
+p , .form-group label {
     color: var(--secondary-color);
 }
 
+.form-group label {
+    font-weight: 500;
+}
+
 #header_div p {
-    font-weight:450;
+    font-weight: 450;
 }
 
 .container {

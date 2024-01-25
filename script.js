@@ -16,9 +16,6 @@ const option = {
     }
 };
 
-function slideUpAnimation(elementId) {
-    
-}
 
 
 
@@ -38,14 +35,12 @@ function showGameApps() {
     toggleElements(option.mobile, "none");
     toggleElements(option.game, "block");
     toggleHeaderDiv("none");
-    slideUpAnimation(option.game);
 }
 
 function showMobileApps() {
     toggleElements(option.mobile, "block");
     toggleElements(option.game, "none");
     toggleHeaderDiv("none");
-    slideUpAnimation(option.mobile);
 }
 
 
@@ -67,12 +62,8 @@ projectDropdown.addEventListener("change", function() {
     const selectedOption = projectDropdown.options[projectDropdown.selectedIndex];
 
     if (selectedOption.id === String(option.game.id)) {
-        console.log("game");
         showGameApps();
     } else if (selectedOption.id == String(option.mobile.id)) {
-        console.log("mobile");
         showMobileApps();
-    } else {
-
     }
 });
