@@ -15,7 +15,7 @@
         </style>
     </head>
     <body>
-        <div class="p-3 text-center" id="settings">
+        <div class="p-3 text-center" id="settings" onclick="redirectToOriginalPage()">
             <h6 class="click-section d-inline-block" id="about-me">About Me</h6>
             <select id="projectDropdown">
                 <option selected disabled hidden id="projects-id">Projects</option>
@@ -24,7 +24,6 @@
             </select>
             <h6 class="click-section d-inline-block ml-3">Contact</h6>
         </div>
-        <h2 class="fade-text animate__animated animate__fadeInUp" id="mainMessage">Thank you, your message has been sent</h1>
         <?php
 
             require __DIR__ . '/vendor/autoload.php';
@@ -40,6 +39,10 @@
             require 'mailer/src/Exception.php';
             require 'mailer/src/PHPMailer.php';
             require 'mailer/src/SMTP.php';
+
+            define('MESSAGE_SENT', '<h2 class="fade-text animate__animated animate__fadeInUp" id="mainMessage">Thank you, your message has been sent</h1>');
+            define('MESSAGE_DIDNT_SEND', '<h2 class="fade-text animate__animated animate__fadeInUp" id="mainMessage">There was a problem sending your message.<br>Please try again</h1>');
+            define('MESSAGE_ERROR', '<h2 class="fade-text animate__animated animate__fadeInUp" id="mainMessage">Sorry there is an issue with the server.<br>Thanks for your patience</h1>');
 
             function allowToSendMail($mail, $recipient) {
                 try {
@@ -70,9 +73,9 @@
 
                 $mail = new PHPMailer(true);
                 allowToSendMail($mail, $recipient);
-
+                print MESSAGE_SENT;
             } else {
-                echo "Nothing was used";
+                print MESSAGE_DIDNT_SEND;
             }
 
         ?>
@@ -93,6 +96,10 @@
             })
         </script>
 
-
+        <script>
+            function redirectToOriginalPage() {
+                window.location.href = "index.php"
+            }
+        </script>
     </body>
 </html>
