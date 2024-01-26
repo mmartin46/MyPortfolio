@@ -3,8 +3,6 @@ param(
     [string]$message
 )
 
-cd MyPortfolio
-
 git add .
 git commit -m $message
 
