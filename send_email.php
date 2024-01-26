@@ -44,6 +44,8 @@
             define('MESSAGE_DIDNT_SEND', '<h2 class="fade-text animate__animated animate__fadeInUp" id="mainMessage">There was a problem sending your message.<br>Please try again</h1>');
             define('MESSAGE_ERROR', '<h2 class="fade-text animate__animated animate__fadeInUp" id="mainMessage">Sorry there is an issue with the server.<br>Thanks for your patience</h1>');
 
+
+            
             function allowToSendMail($mail, $recipient) {
                 try {
                     $mail->isSMTP();
@@ -54,6 +56,10 @@
                     $mail->SMTPSecure = $_ENV['M_PORT'];
                     $mail->Port = $_ENV['M_PORT'];
 
+                    if (empty($_POST['email']) || empty($_POST['message'])) {
+                        return false;
+                    }
+
                     $mail->setFrom($_POST['email']);
                     $mail->addAddress($recipient);
                     $mail->isHTML(true);
@@ -62,22 +68,26 @@
                     $mail->Body = $_POST["message"];
 
                     $mail->send();
+                    return true;
                 } catch (Exception $e) {
-                    echo "Didn't work {$mail->ErrorInfo}";
+                    return false;
                 }
             }
 
-            if (isset($_POST['submit'])) {
+            if (isset($_POST['submit'], $_POST["email"], $_POST["message"])) {
             
                 $recipient = "mitchellbmartin00@gmail.com";
 
                 $mail = new PHPMailer(true);
-                allowToSendMail($mail, $recipient);
-                print MESSAGE_SENT;
+                
+                if (allowToSendMail($mail, $recipient)) {
+                    print MESSAGE_SENT;
+                } else {
+                    print MESSAGE_DIDNT_SEND;
+                }
             } else {
                 print MESSAGE_DIDNT_SEND;
             }
-
         ?>
         <!-- Bootstrap and jQuery Scripts -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
