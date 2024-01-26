@@ -21,7 +21,7 @@
                 <option id="game-option">Games</option>
                 <option id="mobile-option">Mobile Apps</option>
             </select>
-            <h6 class="click-section d-inline-block ml-3">Contact</h6>
+            <h6 class="click-section d-inline-block ml-3" id="contact-option" onclick="showContact()">Contact</h6>
         </div>
 
         <div class="container">
@@ -31,35 +31,6 @@
                     <div class="col-md-6 side_area d-flex flex-column align-items-center
                                 justify-content-center pr-3 fade-text animate__animated animate__fadeInDown" id="intro-block">
                         <img id="my_img" src="assets/1330857.jpg">
-                    </div>
-
-
-                    <!--Contact div-->
-                    <div class="col-md-6 fade-text animate__animated animate__fadeInUp" id="contact_div">
-                        <form action="send_email.php" method="POST">
-                            <div class="form-group">
-                                <h1>Contact Me</h1>
-                                <p>If you have any other questions or requests, feel free to contact me.</p>
-
-
-                                <label for="input-email">Email</label>
-                                <input class="form-control" id="user-email-text" type="email" name="email" placeholder="Enter email"> 
-                                
-                                <br>
-                                <label for="input-subject">Subject</label>
-                                <input class="form-control" id="user-subject-text" type="text" name="subject" placeholder="Enter subject"> 
-                                
-                                <br>
-                                <label for="input-message">Message</label>
-
-                                <br>
-                                <textarea class="form-control" id="user-message-text" rows="3"
-                                placeholder="Enter Message" type="text" name="message"></textarea>
-                            
-                                <br>
-                                <input class="btn btn-primary" type="submit" name="submit" value="Send message">
-                            </div>
-                        </form>
                     </div>
     
                     <!-- Content div-->
@@ -75,6 +46,35 @@
                             in multiple programming languages and technologies.
                         </p>
                     </div>
+                </div>
+            </div>
+
+            <div class="row container p-5" id="contact_block">
+                <div class="col-md-6 fade-text animate__animated animate__fadeInUp" id="contact_div">
+                    <form action="send_email.php" method="POST">
+                        <div class="form-group">
+                            <h1>Contact Me</h1>
+                            <p>If you have any other questions or requests, feel free to contact me.</p>
+
+
+                            <label for="input-email">Email</label>
+                            <input class="form-control" id="user-email-text" type="email" name="email" placeholder="Enter email"> 
+                                
+                            <br>
+                            <label for="input-subject">Subject</label>
+                            <input class="form-control" id="user-subject-text" type="text" name="subject" placeholder="Enter subject"> 
+                            
+                            <br>
+                            <label for="input-message">Message</label>
+
+                            <br>
+                            <textarea class="form-control" id="user-message-text" rows="3"
+                            placeholder="Enter Message" type="text" name="message"></textarea>
+                        
+                            <br>
+                            <input class="btn btn-primary" type="submit" name="submit" value="Send message">
+                        </div>
+                    </form>
                 </div>
             </div>
     

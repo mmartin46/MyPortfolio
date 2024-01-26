@@ -17,7 +17,10 @@ const option = {
 };
 
 
-
+function toggleContactDiv(toggle) {
+    document.getElementById("contact_block").style.display = String(toggle);
+    document.getElementById("contact_div").style.display = String(toggle);
+}
 
 
 function toggleHeaderDiv(toggle) {
@@ -34,12 +37,14 @@ function toggleElements(element, toggle) {
 function showGameApps() {
     toggleElements(option.mobile, "none");
     toggleElements(option.game, "block");
+    toggleContactDiv("none");
     toggleHeaderDiv("none");
 }
 
 function showMobileApps() {
     toggleElements(option.mobile, "block");
     toggleElements(option.game, "none");
+    toggleContactDiv("none");
     toggleHeaderDiv("none");
 }
 
@@ -50,7 +55,9 @@ function toggleAllElements(option, toggle) {
     });
 }
 
+toggleContactDiv("none");
 toggleHeaderDiv("block");
+
 toggleAllElements(Object.values(option), "none");
 
 document.getElementById("about-me").addEventListener("click", function() {
@@ -63,7 +70,14 @@ projectDropdown.addEventListener("change", function() {
 
     if (selectedOption.id === String(option.game.id)) {
         showGameApps();
-    } else if (selectedOption.id == String(option.mobile.id)) {
+    } else if (selectedOption.id === String(option.mobile.id)) {
         showMobileApps();
     }
 });
+
+function showContact() {
+    toggleElements(option.mobile, "none");
+    toggleElements(option.game, "none");
+    toggleHeaderDiv("none");
+    toggleContactDiv("block");
+}
