@@ -15,7 +15,7 @@
     </head>
     <body>
         <div class="p-3 text-center" id="settings">
-            <h6 class="click-section d-inline-block" id="about-me">About Me</h6>
+            <h6 class="click-section d-inline-block" id="about-me" onclick="showAboutMe()">About Me</h6>
             <select id="projectDropdown">
                 <option selected disabled hidden id="projects-id">Projects</option>
                 <option id="game-option">Games</option>

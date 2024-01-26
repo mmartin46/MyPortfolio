@@ -81,3 +81,10 @@ function showContact() {
     toggleHeaderDiv("none");
     toggleContactDiv("block");
 }
+
+function showAboutMe() {
+    toggleElements(option.mobile, "none");
+    toggleElements(option.game, "none");
+    toggleHeaderDiv("blodk");
+    toggleContactDiv("none");
+}
