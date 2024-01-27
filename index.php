@@ -37,7 +37,7 @@
                     <div class="col-md-6 fade-text animate__animated animate__fadeInUp" id="header_div">
                         
                         <h1>Mitchell Martin</h1>
-                        <h2>Enspiring Software Engineer</h2>    
+                        <h2>Aspiring Software Engineer</h2>    
                     
                         <p>I am a recent graduate from Angelo State University
                             with a Bachelor's Degree in Computer Science.
