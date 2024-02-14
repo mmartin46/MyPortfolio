@@ -173,22 +173,11 @@
             
                             <div class="col-sm">
                                 <div class="card" style="width: auto;">
-                                    <img src="assets\projects\mobile\chatapp\chatapp.png" class="card-img-top mt-3 mx-auto">
+                                    <img src="assets\projects\mobile\chatapp\login_screen.png" class="card-img-top mt-3 mx-auto">
                                     <div class="card-body">
-                                        <h5 class="card-title">ChatterApp</h5>
-                                        <p class="card-text">A Basic Messaging Applet</p>
-                                        <a href="https://github.com/mmartin46/ChatteredApp?tab=readme-ov-file" class="btn btn-primary">Click To View</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-sm">
-                                <div class="card" style="width: auto;">
-                                    <img src="assets\projects\mobile\bmi\bmi_0.png" class="card-img-top mt-3 mx-auto">
-                                    <div class="card-body">
-                                        <h5 class="card-title">BMI Calculator</h5>
-                                        <p class="card-text">A Basic BMI Calculator Applet</p>
-                                        <a href="https://github.com/mmartin46/BMICalculator" class="btn btn-primary">Click To View</a>
+                                        <h5 class="card-title">TextMe</h5>
+                                        <p class="card-text text-center">A Basic Messaging Applet</p>
+                                        <a href="https://github.com/mmartin46/TextMeApp" class="btn btn-primary">Click To View</a>
                                     </div>
                                 </div>
                             </div>
